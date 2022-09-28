@@ -1,0 +1,47 @@
+    {{#if error}}
+    <div class="alert alert-danger mt-2" role="alert">
+      {{error}}
+    </div>
+    {{/if}}
+
+<form action="" method="POST">
+
+    <div class="mb-3">
+        <label for="ilosc" class="form-label">Imie</label>
+        <input type="text" class="form-control" name="imie" id="imie" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="ilosc" class="form-label">Nazwisko</label>
+        <input type="text" class="form-control" name="nazwisko" id="nazwisko" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cena" class="form-label">Login</label>
+        <input type="text" class="form-control" name="login" id="login" required>
+    </div>
+
+     <div class="mb-3">
+        <label for="cena" class="form-label">Hasło</label>
+        <input type="password" class="form-control" name="haslo" id="haslo" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cena" class="form-label">Powtórz hasło</label>
+        <input type="password" class="form-control" name="haslo2" id="haslo2" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="cena" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="email" required>
+    </div>
+
+    <div class="text-center mb-3">
+        <button class="btn btn-lg btn-primary">Zarejestruj się</button>
+    </div>
+
+    <div class="text-center mb-3">
+        <a href="/main">Powrót</a>
+    </div>
+
+</form>

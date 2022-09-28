@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="btn btn-outline-primary" aria-current="page" href="/new-wpis">Dodaj Miejsce</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <select class="form-control me-2" name="kategoria">
+            <option value="">wszystko</option>
+            <option value="Nocleg">Nocleg</option>
+            <option value="Zwiedzanie">Zwiedzanie</option>
+            <option value="Miejsca Nietypowe">Miejsca Nietypowe</option>
+            <option value="Zabawa">Zabawa</option>
+            <option value="Relaks">Relaks</option>
+            <option value="Jedzenie">Jedzenie</option>
+        </select>
+        <button class="btn btn-outline-success" type="submit">Pokaż</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Zdjęcie</th>
+            <th>Nazwa Miejsca</th>
+            <th>Miasto</th>
+            <th>Kraj Pochodzenia</th>
+            <th>Kategoria</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each wpis}}
+        <tr>
+            <td>
+              <img src="{{this.LinkZdjecia}}" width="50%" height="50%">
+            </td>
+            <td>{{this.Miejsce}}</td>
+            <td>{{this.Miasto}}</td>
+            <td>{{this.KrajPochodzenia}}</td>
+            <td>{{this.Kategoria}}</td>
+            <td>
+                <form action="wiecej/{{this.Id}}" method="POST">
+                  <button type="submit" class="btn btn-sm btn-outlince-danger"><img src="https://4.bp.blogspot.com/-uNCqlyKYoZ0/Waaqv6PcBkI/AAAAAAAABhM/SdZNJPiv_dEpDVutSS_UQgmYLyI5oFthwCLcBGAs/s1600/timigate-readmore.gif" alt="" width="175px" height="75px"></button>
+                </form>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
